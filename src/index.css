@@ -162,3 +162,25 @@ a, button {
     padding: 24px !important;
   }
 }
+
+/* 🤖 NEXUS AI ChatBot Harmony */
+.chatbot-container {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 10000;
+}
+
+@media (max-width: 480px) {
+  .chatbot-container {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .chat-window {
+    width: 90vw !important;
+    height: 70vh !important;
+    bottom: 80px !important;
+    right: 0px !important;
+  }
+}

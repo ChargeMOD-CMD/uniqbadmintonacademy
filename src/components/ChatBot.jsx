@@ -54,18 +54,19 @@ export const ChatBot = () => {
   };
 
   return (
-    <div style={{ position: "fixed", bottom: 40, right: 40, zIndex: 10000 }}>
+    <div className="chatbot-container">
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: 50, scale: 0.9, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
             exit={{ opacity: 0, y: 50, scale: 0.9, filter: "blur(10px)" }}
-            className="glass-card"
+            className="glass-card chat-window"
             style={{
               width: "clamp(300px, 90vw, 400px)", height: 550, marginBottom: 24,
               display: "flex", flexDirection: "column", border: `1px solid ${theme.colors.accent}40`,
-              boxShadow: `0 30px 60px rgba(0,0,0,0.5)`, overflow: "hidden"
+              boxShadow: `0 30px 60px rgba(0,0,0,0.5)`, overflow: "hidden",
+              position: "relative"
             }}
           >
             {/* Header */}
