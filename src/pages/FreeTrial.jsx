@@ -57,11 +57,11 @@ export const FreeTrial = () => {
         >
           <div style={{ backgroundImage: `url('${import.meta.env.BASE_URL}trial.png')`, backgroundSize: "cover", backgroundPosition: "center", minHeight: 600 }} />
           
-          <div style={{ padding: 60, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <div style={{ display: "flex", gap: 8, marginBottom: 24 }}>
+          <div style={{ padding: "clamp(30px, 8vw, 60px)", display: "flex", flexDirection: "column", justifyContent: "center" }} className="mobile-text-center">
+            <div style={{ display: "flex", gap: 8, marginBottom: 24 }} className="mobile-flex-center">
               {[...Array(5)].map((_, i) => <Star key={i} size={16} fill={theme.colors.gold} color={theme.colors.gold} />)}
             </div>
-            <h2 style={{ fontSize: 42, fontWeight: 950, marginBottom: 28, letterSpacing: "-1.5px" }}>The Evaluation Protocol</h2>
+            <h2 style={{ fontSize: "clamp(32px, 5vw, 42px)", fontWeight: 950, marginBottom: 28, letterSpacing: "-1.5px", lineHeight: 1 }}>The Evaluation Protocol</h2>
             <p style={{ color: theme.colors.textMuted, fontSize: 18, lineHeight: 1.8, marginBottom: 48 }}>
               Experience the UNIQ difference. Our 60-minute evaluation protocol includes technical baseline assessment, footwork calibration, and a customized growth roadmap.
             </p>
@@ -131,7 +131,7 @@ export const FreeTrial = () => {
           }}
         >
           {/* Map Info */}
-          <div style={{ padding: 40, display: "flex", flexDirection: "column", gap: 40 }}>
+          <div style={{ padding: "clamp(24px, 5vw, 40px)", display: "flex", flexDirection: "column", gap: 40 }} className="mobile-text-center">
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 24 }}>
                 <div style={{ padding: 12, background: "rgba(34, 197, 94, 0.1)", borderRadius: "12px" }}>

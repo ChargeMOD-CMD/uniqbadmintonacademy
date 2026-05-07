@@ -63,7 +63,7 @@ export const ChatBot = () => {
             exit={{ opacity: 0, y: 50, scale: 0.9, filter: "blur(10px)" }}
             className="glass-card chat-window"
             style={{
-              width: "clamp(300px, 90vw, 400px)", height: 550, marginBottom: 24,
+              width: "clamp(280px, 92vw, 400px)", height: "clamp(450px, 70vh, 550px)", marginBottom: 24,
               display: "flex", flexDirection: "column", border: `1px solid ${theme.colors.accent}40`,
               boxShadow: `0 30px 60px rgba(0,0,0,0.5)`, overflow: "hidden",
               position: "relative"

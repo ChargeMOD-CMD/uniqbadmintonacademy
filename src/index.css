@@ -22,12 +22,14 @@
   }
 }
 
-body {
+html, body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: var(--primary);
   color: var(--text);
   overflow-x: hidden;
   line-height: 1.6;
+  width: 100%;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -126,12 +128,14 @@ a, button {
 
 @media (max-width: 768px) {
   section {
-    padding-left: 6% !important;
-    padding-right: 6% !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
   
   .glass-card {
-    padding: 30px !important;
+    padding: 24px !important;
   }
 
   /* Footer Mobile Fix */
@@ -143,28 +147,53 @@ a, button {
 
   .footer-links {
     justify-content: center !important;
+    flex-wrap: wrap;
   }
 
   /* 🖼️ Grid Image Harmony on Mobile */
   .responsive-grid > div[style*="backgroundImage"] {
-    min-height: 400px !important;
+    min-height: 300px !important;
+  }
+
+  .mobile-text-center {
+    text-align: center !important;
+  }
+
+  .mobile-flex-center {
+    justify-content: center !important;
   }
 }
 
 @media (max-width: 480px) {
-  h1 { font-size: 36px !important; }
-  h2 { font-size: 28px !important; }
+  h1 { 
+    font-size: 32px !important; 
+    line-height: 1.1 !important; 
+    letter-spacing: -1px !important; 
+  }
+  h2 { 
+    font-size: 26px !important; 
+    line-height: 1.2 !important; 
+    letter-spacing: -0.5px !important; 
+  }
+  h3 { font-size: 22px !important; }
+  
   .chat-toggle {
-    width: 60px !important;
-    height: 60px !important;
-    bottom: 20px !important;
-    right: 20px !important;
+    width: 50px !important;
+    height: 50px !important;
+    bottom: 15px !important;
+    right: 15px !important;
   }
   .responsive-grid {
-    gap: 20px !important;
+    gap: 16px !important;
   }
   .glass-card {
-    padding: 24px !important;
+    padding: 20px !important;
+    border-radius: 20px !important;
+  }
+
+  /* Reset aggressive letter-spacing */
+  .holographic-text {
+    letter-spacing: -1px !important;
   }
 }
 

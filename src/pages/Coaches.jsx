@@ -44,16 +44,16 @@ export const Coaches = () => {
       {/* Hero Image for Coaches */}
       <section style={{ padding: "0 6% 80px" }}>
         <div style={{ 
-          height: 400, borderRadius: 40, overflow: "hidden", 
+          height: "clamp(300px, 40vh, 400px)", borderRadius: "clamp(24px, 5vw, 40px)", overflow: "hidden", 
           backgroundImage: `url('${import.meta.env.BASE_URL}coaches.png')`, backgroundSize: "cover", backgroundPosition: "center",
-          display: "flex", alignItems: "flex-end", padding: 60
+          display: "flex", alignItems: "flex-end", padding: "clamp(24px, 6vw, 60px)"
         }}>
           <div style={{ 
-            padding: "24px 40px", borderRadius: 24, background: "rgba(15, 23, 42, 0.6)", 
+            padding: "clamp(20px, 4vw, 24px) clamp(24px, 5vw, 40px)", borderRadius: 24, background: "rgba(15, 23, 42, 0.6)", 
             backdropFilter: "blur(20px)", border: `1px solid ${theme.colors.glassBorder}` 
-          }}>
-            <h2 style={{ fontSize: 32, fontWeight: 800 }}>Master Your Craft</h2>
-            <p style={{ color: theme.colors.textMuted }}>Personalized guidance for every player.</p>
+          }} className="mobile-text-center">
+            <h2 style={{ fontSize: "clamp(24px, 4vw, 32px)", fontWeight: 800 }}>Master Your Craft</h2>
+            <p style={{ color: theme.colors.textMuted, fontSize: "clamp(14px, 3vw, 16px)" }}>Personalized guidance for every player.</p>
           </div>
         </div>
       </section>
@@ -66,8 +66,8 @@ export const Coaches = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="glass-card"
-            style={{ padding: 50, textAlign: "center" }}
+            className="glass-card mobile-text-center"
+            style={{ padding: "clamp(30px, 8vw, 50px)", textAlign: "center" }}
           >
             <div style={{ 
               width: 100, height: 100, borderRadius: "50%", background: `${c.color}15`, 

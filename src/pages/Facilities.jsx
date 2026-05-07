@@ -21,16 +21,16 @@ export const Facilities = () => {
       {/* Main Image */}
       <section style={{ padding: "0 6% 100px" }}>
         <div className="responsive-grid" style={{ 
-          display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", 
+          display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", 
           gap: 30, background: theme.colors.secondary, borderRadius: 40, overflow: "hidden" 
         }}>
           <div style={{ backgroundImage: `url('${import.meta.env.BASE_URL}court.png')`, backgroundSize: "cover", backgroundPosition: "center", minHeight: 400 }} />
-          <div style={{ padding: 60, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <h2 style={{ fontSize: 36, fontWeight: 800, marginBottom: 24 }}>Professional Infrastructure</h2>
-            <p style={{ color: theme.colors.textMuted, fontSize: 18, lineHeight: 1.7, marginBottom: 40 }}>
+          <div style={{ padding: "clamp(30px, 8vw, 60px)", display: "flex", flexDirection: "column", justifyContent: "center" }} className="mobile-text-center">
+            <h2 style={{ fontSize: "clamp(28px, 4vw, 36px)", fontWeight: 800, marginBottom: 24 }}>Professional Infrastructure</h2>
+            <p style={{ color: theme.colors.textMuted, fontSize: "clamp(16px, 3vw, 18px)", lineHeight: 1.7, marginBottom: 40 }}>
               Our facility spans over 12,000 sq.ft featuring 8 professional-grade courts. We've invested in the best technology to ensure that your training is effective, safe, and professional.
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 30 }} className="responsive-grid">
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 30 }} className="responsive-grid">
               {items.map((item, i) => (
                 <div key={i}>
                   <div style={{ marginBottom: 16 }}>{item.icon}</div>

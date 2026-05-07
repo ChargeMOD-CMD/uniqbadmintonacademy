@@ -43,7 +43,7 @@ export const Programs = () => {
         <p style={{ fontSize: 20, color: theme.colors.textMuted, maxWidth: 700, margin: "0 auto" }}>Choose the program that fits your ambition. From first smash to final victory.</p>
       </section>
 
-      <section style={{ padding: "0 6% 120px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: 30 }} className="responsive-grid">
+      <section style={{ padding: "0 6% 120px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "clamp(20px, 4vw, 30px)" }} className="responsive-grid">
         {programs.map((p, i) => (
           <motion.div 
             key={i}
@@ -53,7 +53,7 @@ export const Programs = () => {
             transition={{ delay: i * 0.1 }}
             className="glass-card"
             style={{ 
-              padding: 50, borderRadius: 40,
+              padding: "clamp(30px, 8vw, 50px)", borderRadius: 40,
               border: p.featured ? `2px solid ${p.color}50` : `1px solid ${theme.colors.glassBorder}`,
               position: "relative",
               display: "flex", flexDirection: "column"

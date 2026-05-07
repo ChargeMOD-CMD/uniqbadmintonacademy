@@ -35,7 +35,7 @@ export const Home = () => {
           zIndex: 3
         }} />
 
-        <div style={{ maxWidth: 850, position: "relative", zIndex: 10 }}>
+        <div style={{ maxWidth: 850, position: "relative", zIndex: 10, width: "100%" }} className="mobile-text-center">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -58,7 +58,7 @@ export const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="holographic-text"
-            style={{ fontSize: "clamp(58px, 10vw, 110px)", fontWeight: 950, lineHeight: 0.85, marginBottom: 36, letterSpacing: "-4px" }}
+            style={{ fontSize: "clamp(42px, 10vw, 110px)", fontWeight: 950, lineHeight: 1, marginBottom: 36, letterSpacing: "-0.04em" }}
           >
             Evolve <br />
             Beyond Physics.
@@ -68,7 +68,7 @@ export const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            style={{ fontSize: 22, color: theme.colors.textMuted, maxWidth: 650, marginBottom: 56, lineHeight: 1.6, fontWeight: 500 }}
+            style={{ fontSize: "clamp(18px, 4vw, 22px)", color: theme.colors.textMuted, maxWidth: 650, margin: "0 auto 56px", lineHeight: 1.6, fontWeight: 500 }}
           >
             We don't teach you to play. We re-engineer your reflexes, calibrate your precision, and unleash your tactical spirit. Welcome to the UNIQ Evolution.
           </motion.p>
@@ -77,19 +77,20 @@ export const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            style={{ display: "flex", gap: 24, flexWrap: "wrap" }}
+            style={{ display: "flex", gap: 20, flexWrap: "wrap" }}
+            className="mobile-flex-center"
           >
             <Link to="/enroll" style={{
-              padding: "22px 52px", borderRadius: "14px", background: theme.colors.accent, color: "#fff",
-              textDecoration: "none", fontSize: 16, fontWeight: 900, textTransform: "uppercase",
+              padding: "20px 40px", borderRadius: "14px", background: theme.colors.accent, color: "#fff",
+              textDecoration: "none", fontSize: 14, fontWeight: 900, textTransform: "uppercase",
               letterSpacing: "2px", boxShadow: `0 20px 40px ${theme.colors.accent}35`, transition: "0.4s",
               display: "flex", alignItems: "center", gap: 12
             }}>
               Begin Protocol <ChevronRight size={20} />
             </Link>
             <Link to="/programs" style={{
-              padding: "22px 52px", borderRadius: "14px", background: "rgba(255,255,255,0.05)", 
-              border: `1px solid ${theme.colors.glassBorder}`, color: "#fff", fontSize: 16, fontWeight: 800, 
+              padding: "20px 40px", borderRadius: "14px", background: "rgba(255,255,255,0.05)", 
+              border: `1px solid ${theme.colors.glassBorder}`, color: "#fff", fontSize: 14, fontWeight: 800, 
               textDecoration: "none", backdropFilter: "blur(20px)", transition: "0.4s",
               textTransform: "uppercase", letterSpacing: "2px",
               display: "flex", alignItems: "center", gap: 12
@@ -115,11 +116,11 @@ export const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card"
-              style={{ padding: "48px 40px", textAlign: "left" }}
+              className="glass-card mobile-text-center"
+              style={{ padding: "40px", textAlign: "left" }}
             >
-              <div style={{ marginBottom: 24, width: 48, height: 48, borderRadius: "14px", background: "rgba(255,255,255,0.03)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", zIndex: 2 }}>{stat.icon}</div>
-              <h2 style={{ fontSize: 56, fontWeight: 950, marginBottom: 8, color: "#fff", letterSpacing: "-2px", position: "relative", zIndex: 2 }}>{stat.value}</h2>
+              <div style={{ marginBottom: 24, width: 48, height: 48, borderRadius: "14px", background: "rgba(255,255,255,0.03)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", zIndex: 2 }} className="mobile-flex-center">{stat.icon}</div>
+              <h2 style={{ fontSize: "clamp(40px, 5vw, 56px)", fontWeight: 950, marginBottom: 8, color: "#fff", letterSpacing: "-2px", position: "relative", zIndex: 2 }}>{stat.value}</h2>
               <p style={{ color: theme.colors.accent, fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: "2px", marginBottom: 12, position: "relative", zIndex: 2 }}>{stat.label}</p>
               <p style={{ color: theme.colors.textMuted, fontSize: 14, lineHeight: 1.5, position: "relative", zIndex: 2 }}>{stat.desc}</p>
             </motion.div>
@@ -133,27 +134,27 @@ export const Home = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="glass-card"
+          className="glass-card responsive-grid mobile-text-center"
           style={{ 
             background: `radial-gradient(circle at top left, ${theme.colors.accent}20, transparent), #0f172a`,
-            borderRadius: "48px", padding: "100px 80px", border: `1px solid ${theme.colors.accent}30`,
-            display: "grid", gridTemplateColumns: "1fr", gap: 60,
+            borderRadius: "48px", padding: "clamp(40px, 8vw, 100px) clamp(24px, 6vw, 80px)", border: `1px solid ${theme.colors.accent}30`,
+            display: "grid", gridTemplateColumns: "1fr", gap: "clamp(30px, 5vw, 60px)",
             position: "relative", overflow: "hidden"
           }}
-          className="responsive-grid"
         >
-          <div style={{ maxWidth: 650, position: "relative", zIndex: 2 }}>
-            <h2 className="holographic-text" style={{ fontSize: 52, fontWeight: 900, marginBottom: 28, lineHeight: 1.1, letterSpacing: "-2px" }}>Ignite Your Inner Champion.</h2>
-            <p style={{ fontSize: 20, color: theme.colors.textMuted, lineHeight: 1.7, fontWeight: 500 }}>
+          <div style={{ maxWidth: 650, position: "relative", zIndex: 2, margin: "0 auto" }}>
+            <h2 className="holographic-text" style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 900, marginBottom: 24, lineHeight: 1.1, letterSpacing: "-2px" }}>Ignite Your Inner Champion.</h2>
+            <p style={{ fontSize: "clamp(16px, 3vw, 20px)", color: theme.colors.textMuted, lineHeight: 1.7, fontWeight: 500 }}>
               The first evaluation is more than a test. It's the beginning of your high-performance legacy. Step into the arena.
             </p>
           </div>
           <Link to="/trial" style={{
             position: "relative", zIndex: 2,
-            padding: "28px 72px", borderRadius: "18px", background: theme.colors.accent, color: "#fff",
-            textDecoration: "none", fontSize: 20, fontWeight: 950, transition: "0.4s",
+            padding: "22px 50px", borderRadius: "18px", background: theme.colors.accent, color: "#fff",
+            textDecoration: "none", fontSize: "clamp(16px, 2vw, 20px)", fontWeight: 950, transition: "0.4s",
             boxShadow: `0 30px 60px ${theme.colors.accent}30`,
-            textTransform: "uppercase", letterSpacing: "2px"
+            textTransform: "uppercase", letterSpacing: "2px",
+            width: "fit-content", margin: "0 auto"
           }}>
             Secure Your Slot
           </Link>

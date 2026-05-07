@@ -40,11 +40,11 @@ export const About = () => {
         }}>
           <div style={{ backgroundImage: `url('${import.meta.env.BASE_URL}about.png')`, backgroundSize: "cover", backgroundPosition: "center" }} />
           <div style={{ 
-            background: theme.colors.secondary, padding: 60, display: "flex", 
+            background: theme.colors.secondary, padding: "clamp(30px, 8vw, 60px)", display: "flex", 
             flexDirection: "column", justifyContent: "center" 
-          }}>
-            <h3 style={{ fontSize: 32, fontWeight: 800, marginBottom: 24 }}>Beyond Just a Club</h3>
-            <p style={{ color: theme.colors.textMuted, fontSize: 17, lineHeight: 1.7 }}>
+          }} className="mobile-text-center">
+            <h3 style={{ fontSize: "clamp(24px, 4vw, 32px)", fontWeight: 800, marginBottom: 24 }}>Beyond Just a Club</h3>
+            <p style={{ color: theme.colors.textMuted, fontSize: 16, lineHeight: 1.7 }}>
               We believe that badminton is more than a sport—it's a path to discipline, resilience, and community. Our academy brings together players of all backgrounds to train, compete, and grow together.
             </p>
           </div>
@@ -65,11 +65,12 @@ export const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              style={{ padding: 40, background: theme.colors.glass, borderRadius: 32, border: `1px solid ${theme.colors.glassBorder}` }}
+              style={{ padding: "clamp(24px, 5vw, 40px)", background: theme.colors.glass, borderRadius: 32, border: `1px solid ${theme.colors.glassBorder}` }}
+              className="mobile-text-center"
             >
-              <div style={{ marginBottom: 24 }}>{v.icon}</div>
-              <h3 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>{v.title}</h3>
-              <p style={{ color: theme.colors.textMuted, fontSize: 16, lineHeight: 1.6 }}>{v.desc}</p>
+              <div style={{ marginBottom: 24 }} className="mobile-flex-center">{v.icon}</div>
+              <h3 style={{ fontSize: 22, fontWeight: 700, marginBottom: 16 }}>{v.title}</h3>
+              <p style={{ color: theme.colors.textMuted, fontSize: 15, lineHeight: 1.6 }}>{v.desc}</p>
             </motion.div>
           ))}
         </div>

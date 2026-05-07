@@ -56,7 +56,7 @@ export const Enroll = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="glass-card"
-              style={{ padding: "60px", textAlign: "center" }}
+              style={{ padding: "clamp(30px, 8vw, 60px)", textAlign: "center" }}
             >
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 30, marginBottom: 40 }} className="responsive-grid">
                 <a 
@@ -115,7 +115,7 @@ export const Enroll = () => {
               animate={{ opacity: 1 }}
               onSubmit={handleFormSubmit} 
               className="glass-card"
-              style={{ padding: 60 }}
+              style={{ padding: "clamp(30px, 8vw, 60px)" }}
             >
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 24 }} className="responsive-grid">
                 <div>

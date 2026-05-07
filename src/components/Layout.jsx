@@ -184,20 +184,20 @@ export const Layout = ({ children }) => {
 
       <nav style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000,
-        padding: scrolled ? "12px 6%" : "28px 6%",
+        padding: scrolled ? "12px clamp(12px, 4%, 28px)" : "28px clamp(12px, 6%, 28px)",
         background: scrolled ? "rgba(15, 23, 42, 0.96)" : "transparent",
         backdropFilter: scrolled ? "blur(24px)" : "none",
         borderBottom: scrolled ? `1px solid ${theme.colors.accent}30` : "none",
         transition: "all 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
         display: "flex", alignItems: "center", justifyContent: "space-between"
       }}>
-        <Link to="/" style={{ display: "flex", alignItems: "center", gap: 14, textDecoration: "none", color: "inherit" }}>
+        <Link to="/" style={{ display: "flex", alignItems: "center", gap: "clamp(8px, 2vw, 14px)", textDecoration: "none", color: "inherit" }}>
           <motion.div whileHover={{ rotate: 360, scale: 1.1 }} transition={{ duration: 0.8, type: "spring" }}>
-            <ShuttlecockIcon size={40} />
+            <ShuttlecockIcon size={34} />
           </motion.div>
           <div>
-            <h1 style={{ fontSize: 30, fontWeight: 950, letterSpacing: "-1.5px", lineHeight: 0.85, color: "#fff" }}>UNIQ</h1>
-            <p style={{ fontSize: 9, fontWeight: 800, color: theme.colors.accent, letterSpacing: "4px", textTransform: "uppercase", marginTop: 4 }}>Badminton Academy</p>
+            <h1 style={{ fontSize: "clamp(20px, 4vw, 30px)", fontWeight: 950, letterSpacing: "-1.5px", lineHeight: 0.85, color: "#fff" }}>UNIQ</h1>
+            <p style={{ fontSize: 8, fontWeight: 800, color: theme.colors.accent, letterSpacing: "3px", textTransform: "uppercase", marginTop: 4 }}>Badminton Academy</p>
           </div>
         </Link>
 
@@ -251,7 +251,8 @@ export const Layout = ({ children }) => {
             style={{
               position: "fixed", inset: 0, background: "rgba(15, 23, 42, 0.98)",
               backdropFilter: "blur(20px)", zIndex: 1200, display: "flex", 
-              flexDirection: "column", padding: "100px 10%", gap: 40
+              flexDirection: "column", padding: "clamp(80px, 15vh, 120px) 10%", gap: "clamp(20px, 5vh, 40px)",
+              alignItems: "center", textAlign: "center"
             }}
           >
             <button 
@@ -265,7 +266,7 @@ export const Layout = ({ children }) => {
                 key={link.name} 
                 to={link.path} 
                 onClick={() => setMobileMenu(false)}
-                style={{ fontSize: 32, fontWeight: 900, color: "#fff", textDecoration: "none" }}
+                style={{ fontSize: "clamp(24px, 8vw, 36px)", fontWeight: 900, color: "#fff", textDecoration: "none", textTransform: "uppercase", letterSpacing: "2px" }}
               >
                 {link.name}
               </Link>
@@ -273,7 +274,7 @@ export const Layout = ({ children }) => {
             <Link 
               to="/trial" 
               onClick={() => setMobileMenu(false)}
-              style={{ padding: "20px", background: theme.colors.accent, color: "#fff", textAlign: "center", borderRadius: 16, fontSize: 18, fontWeight: 900 }}
+              style={{ padding: "18px 48px", background: theme.colors.accent, color: "#fff", textAlign: "center", borderRadius: 16, fontSize: 18, fontWeight: 900, textTransform: "uppercase", letterSpacing: "2px", marginTop: 20, width: "fit-content" }}
             >
               IGNITE NOW
             </Link>
@@ -296,33 +297,35 @@ export const Layout = ({ children }) => {
       </main>
 
       <footer style={{ 
-        padding: "140px 6% 40px", background: "rgba(4, 7, 13, 0.8)", borderTop: `1px solid ${theme.colors.accent}15`,
+        padding: "clamp(60px, 10vh, 140px) 5% 40px", background: "rgba(4, 7, 13, 0.8)", borderTop: `1px solid ${theme.colors.accent}15`,
         color: theme.colors.text, position: "relative", overflow: "hidden", zIndex: 20, backdropFilter: "blur(10px)"
       }}>
         <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 1, background: `linear-gradient(90deg, transparent, ${theme.colors.accent}, transparent)`, opacity: 0.4 }} />
         <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 60, marginBottom: 100, position: "relative", zIndex: 1 }} className="responsive-grid">
-          <div style={{ maxWidth: 450 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 36 }}>
+          <div style={{ maxWidth: 450 }} className="mobile-text-center">
+            <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 36 }} className="mobile-flex-center">
               <ShuttlecockIcon size={44} />
-              <h2 style={{ fontSize: 36, fontWeight: 950, letterSpacing: "-1.5px" }}>UNIQ</h2>
-              <p style={{ fontSize: 9, fontWeight: 800, color: theme.colors.accent, letterSpacing: "4px", textTransform: "uppercase", marginTop: 4 }}>Badminton Academy</p>
+              <div>
+                <h2 style={{ fontSize: 36, fontWeight: 950, letterSpacing: "-1.5px", lineHeight: 1 }}>UNIQ</h2>
+                <p style={{ fontSize: 9, fontWeight: 800, color: theme.colors.accent, letterSpacing: "4px", textTransform: "uppercase", marginTop: 4 }}>Badminton Academy</p>
+              </div>
             </div>
-            <p style={{ color: theme.colors.textMuted, fontSize: 17, lineHeight: 1.85, marginBottom: 40, opacity: 0.8 }}>We aren't a school. We are a sanctuary for those who seek to redefine the limits of human agility. Welcome to the Quantum era of Badminton.</p>
+            <p style={{ color: theme.colors.textMuted, fontSize: 16, lineHeight: 1.85, marginBottom: 40, opacity: 0.8 }}>We aren't a school. We are a sanctuary for those who seek to redefine the limits of human agility. Welcome to the Quantum era of Badminton.</p>
           </div>
-          <div>
-            <h4 style={{ fontSize: 13, fontWeight: 900, marginBottom: 36, textTransform: "uppercase", letterSpacing: "3px", color: theme.colors.accent }}>Protocols</h4>
+          <div className="mobile-text-center">
+            <h4 style={{ fontSize: 13, fontWeight: 900, marginBottom: "clamp(20px, 4vw, 36px)", textTransform: "uppercase", letterSpacing: "3px", color: theme.colors.accent }}>Protocols</h4>
             <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
               {navLinks.map(link => (
                 <Link key={link.name} to={link.path} style={{ color: theme.colors.textMuted, textDecoration: "none", fontSize: 15, fontWeight: 600, transition: "0.3s" }} onMouseEnter={e => e.target.style.color = "#fff"}>{link.name}</Link>
               ))}
             </div>
           </div>
-          <div>
-            <h4 style={{ fontSize: 13, fontWeight: 900, marginBottom: 36, textTransform: "uppercase", letterSpacing: "3px", color: theme.colors.accent }}>The Node</h4>
-            <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 16, color: theme.colors.textMuted }}><MapPin size={20} color={theme.colors.accent} /><span style={{ fontSize: 15 }}>The Quantum Vault, Kellys, Chennai</span></div>
-              <div style={{ display: "flex", alignItems: "center", gap: 16, color: theme.colors.textMuted }}><Phone size={20} color={theme.colors.accent} /><span style={{ fontSize: 15 }}>+91 75502 28654</span></div>
-              <div style={{ display: "flex", alignItems: "center", gap: 16, color: theme.colors.textMuted }}><Mail size={20} color={theme.colors.accent} /><span style={{ fontSize: 15 }}>nexus@uniqbadminton.com</span></div>
+          <div className="mobile-text-center">
+            <h4 style={{ fontSize: 13, fontWeight: 900, marginBottom: "clamp(20px, 4vw, 36px)", textTransform: "uppercase", letterSpacing: "3px", color: theme.colors.accent }}>The Node</h4>
+            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 16, color: theme.colors.textMuted }} className="mobile-flex-center"><MapPin size={20} color={theme.colors.accent} /><span style={{ fontSize: 15 }}>The Quantum Vault, Kellys, Chennai</span></div>
+              <div style={{ display: "flex", alignItems: "center", gap: 16, color: theme.colors.textMuted }} className="mobile-flex-center"><Phone size={20} color={theme.colors.accent} /><span style={{ fontSize: 15 }}>+91 75502 28654</span></div>
+              <div style={{ display: "flex", alignItems: "center", gap: 16, color: theme.colors.textMuted }} className="mobile-flex-center"><Mail size={20} color={theme.colors.accent} /><span style={{ fontSize: 15 }}>nexus@uniqbadminton.com</span></div>
             </div>
           </div>
         </div>
