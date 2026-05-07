@@ -32,8 +32,8 @@ export const Facilities = () => {
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 30 }} className="responsive-grid">
               {items.map((item, i) => (
-                <div key={i}>
-                  <div style={{ marginBottom: 16 }}>{item.icon}</div>
+                <div key={i} className="mobile-text-center">
+                  <div style={{ marginBottom: 16 }} className="mobile-flex-center">{item.icon}</div>
                   <h4 style={{ fontSize: 18, fontWeight: 700, marginBottom: 8 }}>{item.title}</h4>
                   <p style={{ color: theme.colors.textMuted, fontSize: 14 }}>{item.desc}</p>
                 </div>

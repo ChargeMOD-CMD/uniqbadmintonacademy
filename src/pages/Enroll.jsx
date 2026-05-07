@@ -119,22 +119,22 @@ export const Enroll = () => {
             >
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 24 }} className="responsive-grid">
                 <div>
-                  <label style={{ display: "block", fontSize: 14, fontWeight: 600, marginBottom: 12, color: theme.colors.textMuted }}>Full Name</label>
+                  <label style={{ display: "block", fontSize: 14, fontWeight: 600, marginBottom: 12, color: theme.colors.textMuted }} className="mobile-text-center">Full Name</label>
                   <input name="name" type="text" required style={inputStyle} value={formData.name} onChange={handleChange} placeholder="John Doe" />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: 14, fontWeight: 600, marginBottom: 12, color: theme.colors.textMuted }}>Email Address</label>
+                  <label style={{ display: "block", fontSize: 14, fontWeight: 600, marginBottom: 12, color: theme.colors.textMuted }} className="mobile-text-center">Email Address</label>
                   <input name="email" type="email" required style={inputStyle} value={formData.email} onChange={handleChange} placeholder="john@example.com" />
                 </div>
               </div>
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 24 }} className="responsive-grid">
                 <div>
-                  <label style={{ display: "block", fontSize: 14, fontWeight: 600, marginBottom: 12, color: theme.colors.textMuted }}>Phone Number</label>
+                  <label style={{ display: "block", fontSize: 14, fontWeight: 600, marginBottom: 12, color: theme.colors.textMuted }} className="mobile-text-center">Phone Number</label>
                   <input name="phone" type="tel" required style={inputStyle} value={formData.phone} onChange={handleChange} placeholder="+91 XXXXX XXXXX" />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: 14, fontWeight: 600, marginBottom: 12, color: theme.colors.textMuted }}>Target Program</label>
+                  <label style={{ display: "block", fontSize: 14, fontWeight: 600, marginBottom: 12, color: theme.colors.textMuted }} className="mobile-text-center">Target Program</label>
                   <select name="program" required style={inputStyle} value={formData.program} onChange={handleChange}>
                     <option value="" disabled>Select a program</option>
                     <option value="Junior Academy">Junior Academy</option>
@@ -145,7 +145,7 @@ export const Enroll = () => {
               </div>
 
               <div style={{ marginBottom: 40 }}>
-                <label style={{ display: "block", fontSize: 14, fontWeight: 600, marginBottom: 12, color: theme.colors.textMuted }}>Experience Level & Goals</label>
+                <label style={{ display: "block", fontSize: 14, fontWeight: 600, marginBottom: 12, color: theme.colors.textMuted }} className="mobile-text-center">Experience Level & Goals</label>
                 <textarea name="experience" rows="4" style={inputStyle} value={formData.experience} onChange={handleChange} placeholder="Tell us about your background..."></textarea>
               </div>
 

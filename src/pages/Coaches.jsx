@@ -80,16 +80,16 @@ export const Coaches = () => {
             <h3 style={{ fontSize: 28, fontWeight: 800, marginBottom: 8 }}>{c.name}</h3>
             <p style={{ color: c.color, fontWeight: 700, fontSize: 14, textTransform: "uppercase", letterSpacing: "1px", marginBottom: 32 }}>{c.role}</p>
             
-            <div style={{ display: "flex", flexDirection: "column", gap: 20, textAlign: "left" }}>
-              <div style={{ display: "flex", gap: 12 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 20, textAlign: "left" }} className="mobile-text-center">
+              <div style={{ display: "flex", gap: 12 }} className="mobile-flex-center">
                 <Star size={18} color={theme.colors.accent} style={{ flexShrink: 0 }} />
                 <p style={{ fontSize: 15, color: theme.colors.textMuted }}><span style={{ color: "#fff", fontWeight: 600 }}>Experience:</span> {c.exp}</p>
               </div>
-              <div style={{ display: "flex", gap: 12 }}>
+              <div style={{ display: "flex", gap: 12 }} className="mobile-flex-center">
                 <Award size={18} color={theme.colors.gold} style={{ flexShrink: 0 }} />
                 <p style={{ fontSize: 15, color: theme.colors.textMuted }}><span style={{ color: "#fff", fontWeight: 600 }}>Achievements:</span> {c.achievements}</p>
               </div>
-              <div style={{ display: "flex", gap: 12 }}>
+              <div style={{ display: "flex", gap: 12 }} className="mobile-flex-center">
                 <Activity size={18} color={theme.colors.blue} style={{ flexShrink: 0 }} />
                 <p style={{ fontSize: 15, color: theme.colors.textMuted }}><span style={{ color: "#fff", fontWeight: 600 }}>Focus:</span> {c.specialty}</p>
               </div>

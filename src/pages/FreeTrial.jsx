@@ -66,8 +66,8 @@ export const FreeTrial = () => {
               Experience the UNIQ difference. Our 60-minute evaluation protocol includes technical baseline assessment, footwork calibration, and a customized growth roadmap.
             </p>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: 28, marginBottom: 60 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 28, marginBottom: 60 }} className="mobile-text-center">
+              <div style={{ display: "flex", alignItems: "center", gap: 20 }} className="mobile-flex-center">
                 <div style={{ width: 56, height: 56, borderRadius: "18px", background: "rgba(255,255,255,0.03)", display: "flex", alignItems: "center", justifyContent: "center", border: `1px solid ${theme.colors.glassBorder}` }}>
                   <Calendar size={24} color={theme.colors.accent} />
                 </div>
@@ -76,7 +76,7 @@ export const FreeTrial = () => {
                   <p style={{ color: theme.colors.textMuted, fontSize: 15 }}>Monday - Sunday Training Windows</p>
                 </div>
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 20 }} className="mobile-flex-center">
                 <div style={{ width: 56, height: 56, borderRadius: "18px", background: "rgba(255,255,255,0.03)", display: "flex", alignItems: "center", justifyContent: "center", border: `1px solid ${theme.colors.glassBorder}` }}>
                   <Clock size={24} color={theme.colors.blue} />
                 </div>
@@ -133,7 +133,7 @@ export const FreeTrial = () => {
           {/* Map Info */}
           <div style={{ padding: "clamp(24px, 5vw, 40px)", display: "flex", flexDirection: "column", gap: 40 }} className="mobile-text-center">
             <div>
-              <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 24 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 24 }} className="mobile-flex-center">
                 <div style={{ padding: 12, background: "rgba(34, 197, 94, 0.1)", borderRadius: "12px" }}>
                   <MapPin size={24} color={theme.colors.accent} />
                 </div>
