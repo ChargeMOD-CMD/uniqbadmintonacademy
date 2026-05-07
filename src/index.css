@@ -144,6 +144,11 @@ a, button {
   .footer-links {
     justify-content: center !important;
   }
+
+  /* 🖼️ Grid Image Harmony on Mobile */
+  .responsive-grid > div[style*="backgroundImage"] {
+    min-height: 400px !important;
+  }
 }
 
 @media (max-width: 480px) {

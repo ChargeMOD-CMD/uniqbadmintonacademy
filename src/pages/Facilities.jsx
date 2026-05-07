@@ -30,7 +30,7 @@ export const Facilities = () => {
             <p style={{ color: theme.colors.textMuted, fontSize: 18, lineHeight: 1.7, marginBottom: 40 }}>
               Our facility spans over 12,000 sq.ft featuring 8 professional-grade courts. We've invested in the best technology to ensure that your training is effective, safe, and professional.
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 30 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 30 }} className="responsive-grid">
               {items.map((item, i) => (
                 <div key={i}>
                   <div style={{ marginBottom: 16 }}>{item.icon}</div>
