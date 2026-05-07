@@ -126,11 +126,33 @@ a, button {
 
 @media (max-width: 768px) {
   section {
-    padding-left: 5% !important;
-    padding-right: 5% !important;
+    padding-left: 6% !important;
+    padding-right: 6% !important;
   }
   
   .glass-card {
     padding: 30px !important;
+  }
+
+  /* Footer Mobile Fix */
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 20px !important;
+    text-align: center !important;
+  }
+
+  .footer-links {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 36px !important; }
+  h2 { font-size: 28px !important; }
+  .chat-toggle {
+    width: 60px !important;
+    height: 60px !important;
+    bottom: 20px !important;
+    right: 20px !important;
   }
 }

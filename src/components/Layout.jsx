@@ -287,7 +287,7 @@ export const Layout = ({ children }) => {
         color: theme.colors.text, position: "relative", overflow: "hidden", zIndex: 20, backdropFilter: "blur(10px)"
       }}>
         <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 1, background: `linear-gradient(90deg, transparent, ${theme.colors.accent}, transparent)`, opacity: 0.4 }} />
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 60, marginBottom: 100, position: "relative", zIndex: 1 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 60, marginBottom: 100, position: "relative", zIndex: 1 }} className="responsive-grid">
           <div style={{ maxWidth: 450 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 36 }}>
               <ShuttlecockIcon size={44} />
@@ -313,9 +313,9 @@ export const Layout = ({ children }) => {
             </div>
           </div>
         </div>
-        <div style={{ paddingTop: 40, borderTop: `1px solid ${theme.colors.glassBorder}`, display: "flex", justifyContent: "space-between", alignItems: "center", color: "rgba(255,255,255,0.15)", fontSize: 12, fontWeight: 600, letterSpacing: "1px" }}>
+        <div className="footer-bottom" style={{ paddingTop: 40, borderTop: `1px solid ${theme.colors.glassBorder}`, display: "flex", justifyContent: "space-between", alignItems: "center", color: "rgba(255,255,255,0.15)", fontSize: 12, fontWeight: 600, letterSpacing: "1px" }}>
           <p>© 2025 UNIQ QUANTUM PROTOCOL. TRANSCENDING PHYSICS.</p>
-          <div style={{ display: "flex", gap: 40 }}><span>Privacy.log</span><span>Terms.exec</span></div>
+          <div className="footer-links" style={{ display: "flex", gap: 40 }}><span>Privacy.log</span><span>Terms.exec</span></div>
         </div>
       </footer>
       <style>{`

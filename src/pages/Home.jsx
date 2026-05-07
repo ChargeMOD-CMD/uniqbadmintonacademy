@@ -137,9 +137,10 @@ export const Home = () => {
           style={{ 
             background: `radial-gradient(circle at top left, ${theme.colors.accent}20, transparent), #0f172a`,
             borderRadius: "48px", padding: "100px 80px", border: `1px solid ${theme.colors.accent}30`,
-            display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 60,
+            display: "grid", gridTemplateColumns: "1fr", gap: 60,
             position: "relative", overflow: "hidden"
           }}
+          className="responsive-grid"
         >
           <div style={{ maxWidth: 650, position: "relative", zIndex: 2 }}>
             <h2 className="holographic-text" style={{ fontSize: 52, fontWeight: 900, marginBottom: 28, lineHeight: 1.1, letterSpacing: "-2px" }}>Ignite Your Inner Champion.</h2>

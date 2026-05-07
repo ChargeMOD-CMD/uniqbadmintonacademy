@@ -157,6 +157,7 @@ export const ChatBot = () => {
         whileHover={{ scale: 1.1, rotate: 5 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
+        className="chat-toggle"
         style={{
           width: 72, height: 72, borderRadius: "24px", 
           background: isOpen ? theme.colors.primary : theme.colors.accent,
