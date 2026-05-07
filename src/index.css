@@ -155,4 +155,10 @@ a, button {
     bottom: 20px !important;
     right: 20px !important;
   }
+  .responsive-grid {
+    gap: 20px !important;
+  }
+  .glass-card {
+    padding: 24px !important;
+  }
 }

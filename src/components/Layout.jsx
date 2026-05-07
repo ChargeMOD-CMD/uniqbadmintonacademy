@@ -261,9 +261,22 @@ export const Layout = ({ children }) => {
               <X size={32} />
             </button>
             {navLinks.map(link => (
-              <Link key={link.name} to={link.path} style={{ fontSize: 32, fontWeight: 900, color: "#fff", textDecoration: "none" }}>{link.name}</Link>
+              <Link 
+                key={link.name} 
+                to={link.path} 
+                onClick={() => setMobileMenu(false)}
+                style={{ fontSize: 32, fontWeight: 900, color: "#fff", textDecoration: "none" }}
+              >
+                {link.name}
+              </Link>
             ))}
-            <Link to="/trial" style={{ padding: "20px", background: theme.colors.accent, color: "#fff", textAlign: "center", borderRadius: 16, fontSize: 18, fontWeight: 900 }}>IGNITE NOW</Link>
+            <Link 
+              to="/trial" 
+              onClick={() => setMobileMenu(false)}
+              style={{ padding: "20px", background: theme.colors.accent, color: "#fff", textAlign: "center", borderRadius: 16, fontSize: 18, fontWeight: 900 }}
+            >
+              IGNITE NOW
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
@@ -315,8 +328,31 @@ export const Layout = ({ children }) => {
         </div>
         <div className="footer-bottom" style={{ paddingTop: 40, borderTop: `1px solid ${theme.colors.glassBorder}`, display: "flex", justifyContent: "space-between", alignItems: "center", color: "rgba(255,255,255,0.15)", fontSize: 12, fontWeight: 600, letterSpacing: "1px" }}>
           <p>© 2025 UNIQ QUANTUM PROTOCOL. TRANSCENDING PHYSICS.</p>
-          <div className="footer-links" style={{ display: "flex", gap: 40 }}><span>Privacy.log</span><span>Terms.exec</span></div>
+        <div className="footer-links" style={{ display: "flex", gap: 40 }}><span>Privacy.log</span><span>Terms.exec</span></div>
         </div>
+
+        {/* Back to Top Protocol */}
+        <AnimatePresence>
+          {scrolled && (
+            <motion.button
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.5 }}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              style={{
+                position: "absolute", right: "6%", top: -30,
+                width: 60, height: 60, borderRadius: "20px",
+                background: theme.colors.primary, border: `1px solid ${theme.colors.accent}40`,
+                display: "flex", alignItems: "center", justifyContent: "center",
+                cursor: "pointer", color: theme.colors.accent, zIndex: 100,
+                boxShadow: `0 10px 30px rgba(0,0,0,0.5)`
+              }}
+              whileHover={{ y: -5, borderColor: theme.colors.accent }}
+            >
+              <ChevronRight size={24} style={{ transform: "rotate(-90deg)" }} />
+            </motion.button>
+          )}
+        </AnimatePresence>
       </footer>
       <style>{`
         @media (max-width: 900px) {
