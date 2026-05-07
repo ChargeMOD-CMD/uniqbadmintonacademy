@@ -10,7 +10,7 @@ export const Home = () => {
       {/* Hero: The Evolution */}
       <section style={{ 
         position: "relative", minHeight: "100vh", display: "flex", alignItems: "center", 
-        padding: "0 6%", overflow: "hidden", background: theme.colors.primary
+        padding: "120px 6% 80px", overflow: "hidden", background: theme.colors.primary
       }}>
         {/* Background Layer */}
         <div style={{
