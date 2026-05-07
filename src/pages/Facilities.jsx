@@ -24,7 +24,7 @@ export const Facilities = () => {
           display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", 
           gap: 30, background: theme.colors.secondary, borderRadius: 40, overflow: "hidden" 
         }}>
-          <div style={{ backgroundImage: "url('/court.png')", backgroundSize: "cover", backgroundPosition: "center", minHeight: 400 }} />
+          <div style={{ backgroundImage: `url('${import.meta.env.BASE_URL}court.png')`, backgroundSize: "cover", backgroundPosition: "center", minHeight: 400 }} />
           <div style={{ padding: 60, display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <h2 style={{ fontSize: 36, fontWeight: 800, marginBottom: 24 }}>Professional Infrastructure</h2>
             <p style={{ color: theme.colors.textMuted, fontSize: 18, lineHeight: 1.7, marginBottom: 40 }}>

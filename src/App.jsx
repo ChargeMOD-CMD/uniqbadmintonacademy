@@ -11,7 +11,7 @@ import { FreeTrial } from './pages/FreeTrial';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/uniqbadmintonacademy">
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />

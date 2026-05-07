@@ -38,7 +38,7 @@ export const About = () => {
           display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 30,
           borderRadius: 40, overflow: "hidden"
         }}>
-          <div style={{ backgroundImage: "url('/about.png')", backgroundSize: "cover", backgroundPosition: "center" }} />
+          <div style={{ backgroundImage: `url('${import.meta.env.BASE_URL}about.png')`, backgroundSize: "cover", backgroundPosition: "center" }} />
           <div style={{ 
             background: theme.colors.secondary, padding: 60, display: "flex", 
             flexDirection: "column", justifyContent: "center" 

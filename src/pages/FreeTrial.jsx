@@ -55,7 +55,7 @@ export const FreeTrial = () => {
             overflow: "hidden", border: `1px solid ${theme.colors.accent}20`
           }}
         >
-          <div style={{ backgroundImage: "url('/trial.png')", backgroundSize: "cover", backgroundPosition: "center", minHeight: 600 }} />
+          <div style={{ backgroundImage: `url('${import.meta.env.BASE_URL}trial.png')`, backgroundSize: "cover", backgroundPosition: "center", minHeight: 600 }} />
           
           <div style={{ padding: 60, display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <div style={{ display: "flex", gap: 8, marginBottom: 24 }}>

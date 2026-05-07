@@ -15,7 +15,7 @@ export const Home = () => {
         {/* Background Layer */}
         <div style={{
           position: "absolute", inset: 0, 
-          backgroundImage: "url('/hero.png')",
+          backgroundImage: `url('${import.meta.env.BASE_URL}hero.png')`,
           backgroundSize: "cover", backgroundPosition: "center",
           zIndex: 1, transform: "scale(1.02)"
         }} />

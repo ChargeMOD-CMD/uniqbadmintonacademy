@@ -4,6 +4,7 @@ import { motion, AnimatePresence, useScroll, useSpring, useMotionValue } from 'f
 import { theme } from '../theme';
 import { Menu, X, ChevronRight, Phone, Mail, MapPin, Zap, Cpu } from 'lucide-react';
 import { BackgroundEffects } from './BackgroundEffects';
+import { ChatBot } from './ChatBot';
 
 const ShuttlecockIcon = ({ size = 24, color = theme.colors.accent, opacity = 1 }) => (
   <svg width={size} height={size} viewBox="0 0 64 64" fill="none" style={{ opacity }}>
@@ -167,6 +168,7 @@ export const Layout = ({ children }) => {
 
       <BackgroundEffects isHome={location.pathname === "/"} />
       <CursorTrail />
+      <ChatBot />
       
       <motion.div style={{ 
         scaleX, position: "fixed", top: 0, left: 0, right: 0, height: 3, 

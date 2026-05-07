@@ -45,7 +45,7 @@ export const Coaches = () => {
       <section style={{ padding: "0 6% 80px" }}>
         <div style={{ 
           height: 400, borderRadius: 40, overflow: "hidden", 
-          backgroundImage: "url('/coaches.png')", backgroundSize: "cover", backgroundPosition: "center",
+          backgroundImage: `url('${import.meta.env.BASE_URL}coaches.png')`, backgroundSize: "cover", backgroundPosition: "center",
           display: "flex", alignItems: "flex-end", padding: 60
         }}>
           <div style={{ 
